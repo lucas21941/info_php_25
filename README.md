@@ -8,3 +8,6 @@ file open folder: seleciona tudo e apaga
 -/var/www/html/info_php_25 e da um ok
 terminal, novo terminal
 verifica se esta em: /var/www/html/info_php_25
+git add .
+git commit -m "variaveis php"
+git push
