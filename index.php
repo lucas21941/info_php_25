@@ -1,5 +1,6 @@
 <?php
 
+/*
 echo"ola mundo!<br>";
 
 
@@ -12,7 +13,8 @@ if($idade >= 18){
 }else{
     "menor de idade 18. sua idede é $idade";
 }
-
+    
+*/
 
 /*
 dada as ntos de 4 provas e a media para ser aprovada de ano sendo 7.
@@ -21,6 +23,7 @@ dica: media aritimetica.
 
 tema de casa: calcular tambem as medias poderada e harmonica.
 */
+
 
 $mediaEscola = 7;
 
@@ -37,4 +40,91 @@ if ($mediaAluno >= $mediaEscola) {
     echo "O aluno foi reprovado tendo a sua media: $mediaAluno menor que a media da escola: $mediaEscola";
 }
 
+
 // Criar uma calculadora
+
+
+$operador = "/";
+$valor1 = 30;
+$valor2 = 15;
+$resultado = 0;
+
+
+if ($operador == "+") {
+    $resultado = $valor1 + $valor2;
+} else if ($operador == "-") {
+    $resultado = $valor1 - $valor2;
+} else if ($operador == "*") {
+    $resultado = $valor1 * $valor2;
+} else if ($operador == "/") {
+    $resultado = $valor1 / $valor2;
+} else {
+    echo "operador invalido";
+}
+
+echo "<br>Resultado: $resultado";
+ 
+//switch case 
+
+$operador = "+";
+$valor1 = 30;
+$valor2 = 15;
+$resultado = 0;
+
+switch($operador) {
+    case "+":
+        $resultado = $valor1 + $valor2;
+    break;
+    case "-":
+        $resultado = $valor1 - $valor2;
+    break;
+    case "*":
+        $resultado = $valor1 * $valor2;
+    break;
+    case "/":
+        $resultado = $valor1 / $valor2;
+    break;
+    default:
+        echo "operador invalido";
+    break;
+}
+
+// ler 3 valores (A,B e C) e informar se eles sao iguais.
+
+$valorA = 10;
+$valorB = 10;
+$valorC = 10;
+
+
+if ($valorA == $valorB && $valorA == $valorC) {
+    echo "os 3 valores sao iguais.";
+} else {
+    echo "os 3 valores sao diferentes.";
+}
+
+
+
+/*ler 3 valores(A, B e C) e informar ao usuario qual tipo de triangulo ele forma,
+ou se não forman nenhum triangulo.
+triangulos a considerar: equilateros, isocles e escaleno 
+
+*/
+
+$A = 10;
+$B = 10;
+$C = 10;
+
+
+
+
+
+
+
+
+$multiplicador = 5;
+
+for ($i = 0 ; $i <= 10; $i++){
+    $RESULTADO = $MULTIPLICADOR * $I;
+    echo "$multiplicador * $i = $resultado" . "<br>:";
+}
+
