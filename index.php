@@ -110,14 +110,9 @@ triangulos a considerar: equilateros, isocles e escaleno
 
 */
 
-$A = 10;
+/*$A = 10;
 $B = 10;
 $C = 10;
-
-
-
-
-
 
 
 
@@ -127,4 +122,42 @@ for ($i = 0 ; $i <= 10; $i++){
     $RESULTADO = $MULTIPLICADOR * $I;
     echo "$multiplicador * $i = $resultado" . "<br>:";
 }
+*/
 
+
+/*$contadorPares = 0;
+
+for ($numero = 2; $contadorPares < 20; $numero++) {
+    $resto = $numero % 2;
+    $par = $resto == 0;
+
+    if ($par) {
+        echo "o numero $numero é par! <br>";
+        $contadorPares++;
+    }
+}
+
+*/
+
+// criar uma contagem regressiva de 10 - 0
+
+// encontrar os 5 primeiros numeros primos
+
+$quantidadePrimos = 0;
+$numero = 2;
+  echo "os 5 primeiros numeros sao: <br>";
+
+  while ($quantidedePrimos < 5) {
+    $sePrimo = true;
+
+    for ($i = 2; $i < $numero; $i++) {
+        if ($numero % $i == 0) {
+            $sePrimo = false;
+             break;
+        }
+    } if ($seprimo) {
+    echo $numero . "<br>";
+    $quantidadePrimos++;
+   }
+    $numero++;
+  }
