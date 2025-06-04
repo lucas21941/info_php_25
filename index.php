@@ -147,7 +147,7 @@ $quantidadePrimos = 0;
 $numero = 2;
   echo "os 5 primeiros numeros sao: <br>";
 
-  while ($quantidedePrimos < 5) {
+  while ($quantidadePrimos < 5) {
     $sePrimo = true;
 
     for ($i = 2; $i < $numero; $i++) {
@@ -155,7 +155,7 @@ $numero = 2;
             $sePrimo = false;
              break;
         }
-    } if ($seprimo) {
+    } if ($sePrimo) {
     echo $numero . "<br>";
     $quantidadePrimos++;
    }
