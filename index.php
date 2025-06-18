@@ -4,7 +4,7 @@
 echo"ola mundo!<br>";
 
 
-$ano_informado = 1995;
+$ano_in  mado = 1995;
 $ano_atual = date("Y");
 $idade = $ano_atual - $ano_informado;
 
@@ -161,3 +161,45 @@ $numero = 2;
    }
     $numero++;
   }
+
+/*
+$palavra = "Lucas";
+$palavraFormatada = strtolower(str_replace(' ', '', $palavra));
+$tamanho = strlen($palavraFormatada);
+$ehPalindromo = true;
+
+for ($i = 0; $i < $tamanho / 2; $i++) {
+    if ($palavraFormatada[$i] !== $palavraFormatada[$tamanho - 1 - $i]) {
+        $ehPalindromo = false;
+        break;
+    }
+}
+
+if ($ehPalindromo) {
+    echo "'$palavra' é um palíndromo.";
+} else {
+    echo "'$palavra' não é um palíndromo.";
+}
+
+
+
+*/
+
+$palavraProcurada = "infoserv";
+$frase = "infoserv curso php";
+$palavraFormatada = strtolower(str_replace(' ', ' ', $palavraProcurada));
+$tamanho = strlen($palavraFormatada);
+$ehletraIgual = true;
+
+for ($i = 0; $i <$tamanho / 2; $i++) {
+    if ($palavraFormatada[$i] !== $palavraFormatada[$tamanho - 1 - $i]) {
+        $ehletraIgual = false;
+        break;
+    }
+}
+
+if($ehletraIgual) {
+    echo "'$palavraProcurada' é igual.";
+}else {
+    echo"'$palavraProcurada' não é igual.";
+}
