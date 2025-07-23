@@ -486,5 +486,67 @@ exibirDados($numerosOrdenados);
 
   * Utilizar somente laço FOR. Não utilizar funcoes prontas do PHP.
   */
-echo "ola";
-echo "bahh";
+/*
+$soma = [];
+$numerosA = [10, 20, 30, 40, 50];
+$numerosB = [5, 45, 37, 2, 25];
+
+
+    for($i=0; $i < count($numerosA); $i++) {
+        $somaElementos = $numerosA[$i] + $numerosB[$i];
+          $soma[] = $somaElementos;
+}       
+       
+       
+          for($i=0; $i  < count($soma); $i++) {
+            echo $soma[$i] . "<br>";
+               
+}
+
+*/
+/*$produto = [];
+$numerosA = [10, 20, 30, 40, 50];
+$numerosB = [5, 45, 37, 2, 25];
+
+
+    for($i=0; $i < count($numerosA); $i++) {
+
+        $multiplicaElementos = $numerosA[$i] * $numerosB[$i];
+
+          $produto[] = $multipicaElementos;
+
+
+}       
+       
+       
+          for($i=0; $i  < count($produto); $i++) {
+            echo $produto[$i] . "<br>";
+               
+}
+
+//saida esperada
+
+/*$valor = 170;
+$notas = [2, 5, 10, 20, 50, 100, 200];
+$restante = $valor;
+
+for ($i = 0; $i < count($notas); $i++) {
+    $nota = $notas[$i];
+    if ($restante >= $nota) {
+   
+}
+*/
+$totalNotas = ["200" => 0,"100" => 0, "50" => 0, "20" => 0, "10" => 0, "5" => 0, "2" => 0,];
+$valor = 170;
+$notas = [200, 100, 50, 20, 10, 5, 2];
+
+for ($i = 0; $i < count($notas); $i++) {
+    $nota = $notas[$i];
+
+    if ($valor >= $nota) {
+        $quantidade = (int) ($valor/$nota);
+        $totalNotas[$nota] += $quantidade;
+        $valor -= $quantidade * $nota;
+    }
+}
+
