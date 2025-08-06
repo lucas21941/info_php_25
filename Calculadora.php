@@ -1,8 +1,9 @@
 <?php
  
  class Calculadora {
+  // propriedade/ atributo
    public $resultado = 0;
-
+    //função/metodo
     public function somar($valor1, $valor2) {
       $this->resultado = $valor1 + $valor2;
     }   
