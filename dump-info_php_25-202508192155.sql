@@ -17,6 +17,35 @@
 /*M!100616 SET @OLD_NOTE_VERBOSITY=@@NOTE_VERBOSITY, NOTE_VERBOSITY=0 */;
 
 --
+-- Table structure for table `endereco`
+--
+
+DROP TABLE IF EXISTS `endereco`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `endereco` (
+  `id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `bairro` varchar(100) NOT NULL,
+  `logradouro` varchar(100) NOT NULL,
+  `complemento` varchar(100) NOT NULL,
+  `numero` varchar(100) NOT NULL,
+  `cidade` varchar(100) NOT NULL,
+  `estado` varchar(100) NOT NULL,
+  `cep` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `endereco`
+--
+
+LOCK TABLES `endereco` WRITE;
+/*!40000 ALTER TABLE `endereco` DISABLE KEYS */;
+/*!40000 ALTER TABLE `endereco` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pessoas`
 --
 
@@ -26,8 +55,15 @@ DROP TABLE IF EXISTS `pessoas`;
 CREATE TABLE `pessoas` (
   `id` smallint(6) NOT NULL AUTO_INCREMENT,
   `sexo` enum('M','F') NOT NULL DEFAULT 'M',
-  `nacionalidade` varchar(255) NOT NULL,
-  `data_nascimento` date NOT NULL,
+  `nacionalidade` varchar(255) NOT NULL DEFAULT 'brasileiro',
+  `data_nascimento` date NOT NULL DEFAULT '1990-05-21',
+  `estado_civil` varchar(100) NOT NULL DEFAULT 'casado',
+  `nome_mae` varchar(100) NOT NULL DEFAULT 'ela',
+  `nome_pai` varchar(100) NOT NULL DEFAULT 'ele',
+  `cpf` varchar(65) NOT NULL,
+  `escolaridade` varchar(100) NOT NULL,
+  `telefone` decimal(10,0) NOT NULL,
+  `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -51,14 +87,15 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` smallint(6) NOT NULL AUTO_INCREMENT,
   `login` varchar(255) NOT NULL,
-  `senha` text NOT NULL,
+  `senha` varchar(255) NOT NULL,
   `nome_usuario` varchar(255) NOT NULL,
   `email_recuperacao` varchar(255) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 1,
-  `tipo_perfil` varchar(100) NOT NULL,
-  `permissoes` varchar(100) DEFAULT NULL,
+  `status` varchar(100) NOT NULL,
+  `tipo_perfil` varchar(255) NOT NULL,
+  `permissoes` varchar(100) NOT NULL,
+  `logado` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,10 +104,6 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES
-(1,'lucas','1234','lucasberte21','lucasberte21@gmail.com',1,'adm','all'),
-(2,'joao','567','joao','joaobetao@gmail.com',0,'convidado','deny'),
-(3,'fulano','8901','fulano@','fulano@@gmail.com',1,'convidado','parcial');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-08-12 21:52:14
+-- Dump completed on 2025-08-19 21:55:19

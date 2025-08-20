@@ -12,12 +12,15 @@ git add .
 git commit -m "variaveis php"
 git push
 sudo service apache2 start
+  banco de dados
+  sudo service mariadb start
+  sudo mysql -uroot -p
 
 SHOW DATABASES;
 
-    CREATE DATABASE IF NOT EXISTS curso_php_25;
+    CREATE DATABASE IF NOT EXISTS info_php_25;
 
-    USE curso_php_25;
+    USE info_php_25;
 
     CREATE USER 'aluno'@localhost IDENTIFIED BY '1234';
 
